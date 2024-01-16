@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/pages/history_detail.dart';
 import 'package:food_order/pages/main_page.dart';
+import 'package:food_order/widgets/history/history_item.dart';
 import 'package:food_order/widgets/iconBack/back_icon_push.dart';
 import 'package:food_order/widgets/navbar/custom_bottomnavbar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,11 +32,89 @@ class HistoryPage extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: ListView(
-            children: const [
-              Text("Order 1"),
-              Text("Order 2"),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: ListView(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryDetail()));
+                  },
+                  child: const HistoryCard(
+                    order: 'Order 1',
+                    widthKuning: 350,
+                    heightKuning: 50,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryDetail()));
+                  },
+                  child: const HistoryCard(
+                    order: 'Order 2',
+                    widthKuning: 350,
+                    heightKuning: 50,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryDetail()));
+                  },
+                  child: const HistoryCard(
+                    order: 'Order 3',
+                    widthKuning: 350,
+                    heightKuning: 50,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryDetail()));
+                  },
+                  child: const HistoryCard(
+                    order: 'Order 4',
+                    widthKuning: 350,
+                    heightKuning: 50,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryDetail()));
+                  },
+                  child: const HistoryCard(
+                    order: 'Order 5',
+                    widthKuning: 350,
+                    heightKuning: 50,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: const CustomNavbar(),

@@ -9,7 +9,7 @@ class TenderloinSteak extends StatelessWidget {
     return const TemplateMenu(
       gambar: 'lib/asset/steak.png',
       nama: 'Tenderloin Steak',
-      harga: 'Rp 90.000',
+      harga: 90000,
       desc: 'Black Angus Tenderloin Steak 250gr',
       position: 320,
     );

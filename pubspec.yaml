@@ -51,9 +51,15 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
+  # TEXT
     - lib/asset/judul1.png
-    - lib/asset/doodle.png
     - lib/asset/Favorites.png
+    - lib/asset/howtoorder.png
+    - lib/asset/aboutus.png
+    - lib/asset/cart.png
+    - lib/asset/payment.png
+  
+  # ICON
     - lib/asset/bakery.png
     - lib/asset/beverages.png
     - lib/asset/chicken.png
@@ -62,17 +68,56 @@ flutter:
     - lib/asset/rice.png
     - lib/asset/sidedish.png
     - lib/asset/soup.png
-    - lib/asset/howtoorder.png
-    - lib/asset/aboutus.png
-    - lib/asset/cart.png
-    - lib/asset/payment.png
-    - lib/asset/steak.png
-    - lib/asset/friednoodle.png
-    - lib/asset/juice.png
+
+  # DOODLE
+    - lib/asset/doodle.png
+
+  # RICE
+    - lib/asset/nasgorseafood.png
+    - lib/asset/nasgorsosis.png
+    - lib/asset/nasgordaging.png
+
+  # CHICKEN
     - lib/asset/friedchicken.png
-    - lib/asset/beefricebowl.png
-    - lib/asset/sirloin.png
     - lib/asset/chickenricebowl.png
+
+  # BEEF
+    - lib/asset/steak.png
+    - lib/asset/sirloin.png
+    - lib/asset/beefricebowl.png
+
+  # NOODLE
+    - lib/asset/friednoodle.png
+    - lib/asset/yamienasin.png
+    - lib/asset/hotramen.png
+    - lib/asset/curryramen.png
+    - lib/asset/soyuramen.png
+    - lib/asset/miebakso.png
+
+  # BEVERAGE
+    - lib/asset/juice.png
+    - lib/asset/americano.png
+    - lib/asset/fanta.png
+    - lib/asset/eskosu.png
+    - lib/asset/frestea.png
+    - lib/asset/tehmanis.png
+    - lib/asset/tehtawar.png
+    - lib/asset/jambu.png
+
+  # BAKERY
+    - lib/asset/croissant.png
+    - lib/asset/donut.png
+
+  # SOUP
+    - lib/asset/creamsoup.png
+    - lib/asset/mushroomsoup.png
+    - lib/asset/crabsoup.png
+    - lib/asset/misosoup.png
+    - lib/asset/redbeansoup.png
+
+  # SIDEDISH
+    - lib/asset/garlicbread.png
+    - lib/asset/salad.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/pages/f&b/all_dish_page.dart';
 import 'package:food_order/pages/f&b/beef_page.dart';
 import 'package:food_order/pages/f&b/chicken_page.dart';
 import 'package:food_order/pages/f&b/coffee_page.dart';
-import 'package:food_order/pages/f&b/dessert_page.dart';
 import 'package:food_order/pages/f&b/juice_page.dart';
 import 'package:food_order/pages/f&b/noodle_page.dart';
 import 'package:food_order/pages/f&b/rice_page.dart';
 import 'package:food_order/pages/f&b/softdrink_page.dart';
 import 'package:food_order/pages/f&b/tea_page.dart';
-import 'package:food_order/pages/f&b/vegetable_page.dart';
 import 'package:food_order/widgets/otherMenu/custom_allmenu_text.dart';
 import 'package:food_order/widgets/garis.dart';
 
@@ -66,10 +65,6 @@ class AllMenuCard extends StatelessWidget {
               Garis(),
               CustomAllMenuText(text: "  Noodle", page: NoodlePage(),),
               Garis(),
-              CustomAllMenuText(text: "  Vegetable", page: VegetablePage(),),
-              Garis(),
-              CustomAllMenuText(text: "  Dessert", page: DessertPage(),),
-              Garis(),
               Padding(
                 padding: EdgeInsets.only(left: 10),
                 child: CustomAllMenuText(text: "Tea", page: TeaPage(),),
@@ -81,6 +76,7 @@ class AllMenuCard extends StatelessWidget {
               Garis(),
               CustomAllMenuText(text: "  Soft Drink", page: SoftDrinkPage(),),
               Garis(),
+              CustomAllMenuText(text: "  ALL", page: AllDishPage(),),
             ],
           ),
         ),

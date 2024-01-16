@@ -9,7 +9,7 @@ class FriedChicken extends StatelessWidget {
     return const TemplateMenu(
       gambar: 'lib/asset/friedchicken.png',
       nama: 'Fried Chicken',
-      harga: 'Rp 20.000',
+      harga: 20000,
       desc: 'Ayam Goreng Crispy',
       position: 320,
     );

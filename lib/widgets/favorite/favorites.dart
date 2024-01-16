@@ -4,7 +4,7 @@ import 'package:food_order/widgets/menu_page/beef/beef_rice_bowl.dart';
 import 'package:food_order/widgets/menu_page/beef/sirloin_steak.dart';
 import 'package:food_order/widgets/menu_page/beef/tenderloin_steak.dart';
 import 'package:food_order/widgets/menu_page/chicken/fried_chicken.dart';
-import 'package:food_order/widgets/menu_page/juice/orange_juice.dart';
+import 'package:food_order/widgets/menu_page/beverages/juice/orange_juice.dart';
 
 class FavoritesRow extends StatelessWidget {
   const FavoritesRow({super.key});

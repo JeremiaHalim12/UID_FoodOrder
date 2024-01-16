@@ -23,21 +23,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// REVISI
-
-// Tombol back di semua page terlalu mepet (DONE)
-
-// buat history page, setiap transaksi langsung masuk ke history
-
-// tambahin notification setiap add menu / payment success atau pindah page ke page payment success
-
-// download png tiap makanan
-
-// buat page masing-masing payment
-
-// page cart dibikin listview
-// cart mulai dari 0
-// pas add menu baru masuk
-// perbaiki listview item di cart
-// price total & tax diperbaiki

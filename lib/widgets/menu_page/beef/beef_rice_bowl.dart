@@ -9,7 +9,7 @@ class BeefRiceBowl extends StatelessWidget {
     return const TemplateMenu(
       gambar: 'lib/asset/beefricebowl.png',
       nama: 'Beef Rice Bowl',
-      harga: 'Rp 45.000',
+      harga: 45000,
       desc: 'Beef teriyaki/blackpepper/BBQ rice bowl',
       position: 320,
     );

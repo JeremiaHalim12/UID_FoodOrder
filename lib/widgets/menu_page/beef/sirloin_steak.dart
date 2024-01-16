@@ -9,7 +9,7 @@ class SirloinSteak extends StatelessWidget {
     return const TemplateMenu(
       gambar: 'lib/asset/sirloin.png',
       nama: 'Sirloin Steak',
-      harga: 'Rp 80.000',
+      harga: 80000,
       desc: 'Black Angus Sirloin Steak 250gr',
       position: 290,
     );

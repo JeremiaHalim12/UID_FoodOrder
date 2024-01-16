@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/widgets/iconBack/back_icon_pop.dart';
 import 'package:food_order/widgets/menuList/custom_menu.dart';
+import 'package:food_order/widgets/menu_page/sidedish/garlic_bread.dart';
+import 'package:food_order/widgets/menu_page/sidedish/salad_buah.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SideDishPage extends StatelessWidget {
@@ -30,59 +32,31 @@ class SideDishPage extends StatelessWidget {
         ),
         body: Center(
           child: ListView(
-            children: const [
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
-              CustomMenu(
-                  name: "Chicken Fried Rice",
-                  price: "Rp 25.000",
-                  gambar: "lib/asset/steak.png"),
+            children: [
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SaladBuah()));
+                  },
+                  child: const CustomMenu(
+                      name: "Salad Buah",
+                      price: "Rp 17.000",
+                      gambar: "lib/asset/salad.png"),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const GarlicBread()));
+                  },
+                  child: const CustomMenu(
+                      name: "Garlic Bread",
+                      price: "Rp 20.000",
+                      gambar: "lib/asset/garlicbread.png"),
+                ),
             ],
           ),
         ),

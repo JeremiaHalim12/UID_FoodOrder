@@ -3,6 +3,9 @@ import 'package:food_order/widgets/iconBack/back_icon_pop.dart';
 import 'package:food_order/widgets/menuList/custom_menu.dart';
 import 'package:food_order/widgets/menu_page/beef/beef_rice_bowl.dart';
 import 'package:food_order/widgets/menu_page/chicken/chicken_rice_bowl.dart';
+import 'package:food_order/widgets/menu_page/rice/nasgor_daging.dart';
+import 'package:food_order/widgets/menu_page/rice/nasgor_seafood.dart';
+import 'package:food_order/widgets/menu_page/rice/nasgor_sosis.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RicePage extends StatelessWidget {
@@ -58,6 +61,42 @@ class RicePage extends StatelessWidget {
                       name: "Beef Rice Bowl",
                       price: "Rp 45.000",
                       gambar: "lib/asset/beefricebowl.png"),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NasgorDaging()));
+                  },
+                  child: const CustomMenu(
+                      name: "Nasi Goreng Sapi",
+                      price: "Rp 30.000",
+                      gambar: "lib/asset/nasgordaging.png"),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NasgorSeafood()));
+                  },
+                  child: const CustomMenu(
+                      name: "Nasi Goreng Seafood",
+                      price: "Rp 32.000",
+                      gambar: "lib/asset/nasgorseafood.png"),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NasgorSosis()));
+                  },
+                  child: const CustomMenu(
+                      name: "Nasi Goreng Sosis",
+                      price: "Rp 25.000",
+                      gambar: "lib/asset/nasgorsosis.png"),
                 ),
               ],
             ),

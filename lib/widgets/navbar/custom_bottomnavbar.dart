@@ -57,7 +57,7 @@ class CustomNavbar extends StatelessWidget {
             IconButton(
               onPressed: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const CartPage()));
+                    MaterialPageRoute(builder: (context) => CartPage()));
               },
               icon: const Icon(
                 Icons.shopping_cart_outlined,

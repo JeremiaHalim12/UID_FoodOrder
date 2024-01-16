@@ -9,7 +9,7 @@ class ChickenRiceBowl extends StatelessWidget {
     return const TemplateMenu(
       gambar: 'lib/asset/chickenricebowl.png',
       nama: 'Chicken Rice Bowl',
-      harga: 'Rp 30.000',
+      harga: 30000,
       desc: 'Chicken teriyaki/blackpepper/BBQ rice bowl',
       position: 350,
     );

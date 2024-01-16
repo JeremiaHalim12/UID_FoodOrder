@@ -3,13 +3,41 @@ import 'package:flutter/services.dart';
 import 'package:food_order/widgets/iconBack/back_icon_pop.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TemplateMenu extends StatelessWidget {
+class TemplateMenu extends StatefulWidget {
   final String gambar;
   final String nama;
-  final String harga;
+  final int harga;
   final String desc;
   final double position;
-  const TemplateMenu({super.key, required this.gambar, required this.nama, required this.harga, required this.desc, required this.position});
+  const TemplateMenu({
+    super.key,
+    required this.gambar,
+    required this.nama,
+    required this.harga,
+    required this.desc,
+    required this.position,
+  });
+
+  @override
+  State<TemplateMenu> createState() => _TemplateMenuState();
+}
+
+class _TemplateMenuState extends State<TemplateMenu> {
+  int jumlah = 1;
+
+  void tambah() {
+    setState(() {
+      jumlah++;
+    });
+  }
+
+  void kurang() {
+    setState(() {
+      if (jumlah > 1) {
+        jumlah--;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,9 +80,9 @@ class TemplateMenu extends StatelessWidget {
 
             // GAMBAR MENU
             Positioned(
-              bottom: position,
+              bottom: widget.position,
               child: Image(
-                image: AssetImage(gambar),
+                image: AssetImage(widget.gambar),
                 fit: BoxFit.contain,
                 width: 320,
                 height: 320,
@@ -81,28 +109,38 @@ class TemplateMenu extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          GestureDetector(
+                            onTap: () {
+                              kurang();
+                            },
+                            child: Text(
+                              "-",
+                              style: GoogleFonts.leagueSpartan(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
                           Text(
-                            "-",
+                            jumlah.toString(),
                             style: GoogleFonts.leagueSpartan(
                               fontSize: 17,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
                             ),
                           ),
-                          Text(
-                            "1",
-                            style: GoogleFonts.leagueSpartan(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
-                            ),
-                          ),
-                          Text(
-                            "+",
-                            style: GoogleFonts.leagueSpartan(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
+                          GestureDetector(
+                            onTap: () {
+                              tambah();
+                            },
+                            child: Text(
+                              "+",
+                              style: GoogleFonts.leagueSpartan(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ],
@@ -122,12 +160,44 @@ class TemplateMenu extends StatelessWidget {
                       ),
                     ),
                     child: Center(
-                      child: Text(
-                        "Add to Cart",
-                        style: GoogleFonts.leagueSpartan(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
+                      child: GestureDetector(
+                        onTap: () {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Container(
+                                height: 50,
+                                child: Center(
+                                  child: Text(
+                                    "Item has been added to cart",
+                                    style: GoogleFonts.leagueSpartan(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              duration: const Duration(seconds: 2),
+                              backgroundColor: const Color(0xFFFFD65C),
+                              behavior: SnackBarBehavior.floating,
+                              margin: const EdgeInsets.only(bottom: 680),
+                            ),
+                          );
+                          // CartItem newItem = CartItem(
+                          //     name: widget.nama,
+                          //     price: widget.harga * jumlah,
+                          //     quantity: jumlah,
+                          //     gambar: widget.gambar);
+                          // ShoppingCart().addToCart(newItem);
+                        },
+                        child: Text(
+                          "Add to Cart",
+                          style: GoogleFonts.leagueSpartan(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
@@ -140,7 +210,7 @@ class TemplateMenu extends StatelessWidget {
             Positioned(
               bottom: 115,
               child: Text(
-                harga,
+                'Rp ${widget.harga * jumlah}',
                 style: GoogleFonts.leagueSpartan(
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
@@ -156,7 +226,7 @@ class TemplateMenu extends StatelessWidget {
                 width: 300,
                 height: 50,
                 child: Text(
-                  desc,
+                  widget.desc,
                   style: GoogleFonts.leagueSpartan(
                     fontSize: 24,
                     fontWeight: FontWeight.w400,
@@ -172,10 +242,10 @@ class TemplateMenu extends StatelessWidget {
             Positioned(
               bottom: 285,
               child: Container(
-                width: 300,
+                width: 350,
                 height: 50,
                 child: Text(
-                  nama,
+                  widget.nama,
                   style: GoogleFonts.leagueSpartan(
                     fontSize: 35,
                     fontWeight: FontWeight.w600,

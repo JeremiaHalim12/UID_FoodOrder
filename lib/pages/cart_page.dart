@@ -8,6 +8,7 @@ import 'package:food_order/widgets/navbar/custom_bottomnavbar.dart';
 import 'package:food_order/widgets/cart/total_price_card.dart';
 
 class CartPage extends StatelessWidget {
+  
   const CartPage({super.key});
 
   @override
